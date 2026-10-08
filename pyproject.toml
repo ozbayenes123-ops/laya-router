@@ -1,0 +1,23 @@
+[project]
+name = "laya-router-mcp"
+version = "0.1.0"
+description = "Laya Multilingual System-1 decision/router model as an MCP server (stdio) for Hermes"
+requires-python = ">=3.11"
+dependencies = [
+    "laya>=0.3.0",
+    "mcp>=1.0.0,<2",
+]
+
+[project.scripts]
+laya-router = "laya_router_mcp:main"
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

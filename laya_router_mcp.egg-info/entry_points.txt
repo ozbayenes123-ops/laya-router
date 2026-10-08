@@ -1,0 +1,2 @@
+[console_scripts]
+laya-router = laya_router_mcp:main
